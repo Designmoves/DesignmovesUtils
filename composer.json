@@ -13,6 +13,7 @@
     "license": "BSD-3-Clause",
     "require": {
         "php": ">=5.3.23",
+        "zendframework/zend-cache": "2.*",
         "zendframework/zend-config": "2.*",
         "zendframework/zend-eventmanager": "2.*",
         "zendframework/zend-filter": "2.*",
