@@ -36,6 +36,7 @@ use DesignmovesUtils\Listener\SlugifyListener;
 use PHPUnit_Framework_TestCase;
 use Zend\EventManager\Event;
 use Zend\EventManager\EventManager;
+use Zend\EventManager\SharedEventManager;
 
 /**
  * @coversDefaultClass DesignmovesUtils\Listener\SlugifyListener
@@ -80,6 +81,7 @@ class SlugifyListenerTest extends PHPUnit_Framework_TestCase
     public function testAttachesSlugifyListenerOnAllEvents()
     {
         $eventManager = new EventManager;
+        $eventManager->setSharedManager(new SharedEventManager);
         $eventManager->attach($this->listener);
 
         $listeners        = $eventManager->getSharedManager()->getListeners('*', 'slugify');
