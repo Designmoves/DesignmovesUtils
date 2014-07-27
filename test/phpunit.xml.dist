@@ -14,7 +14,7 @@
     verbose="true">
 
   <testsuites>
-    <testsuite name="DesignmovesLog">
+    <testsuite name="DesignmovesUtils">
       <directory>./DesignmovesUtilsTest</directory>
     </testsuite>
   </testsuites>
