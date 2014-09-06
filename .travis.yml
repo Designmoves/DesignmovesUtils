@@ -6,6 +6,8 @@ php:
   - 5.3
   - 5.4
   - 5.5
+  - 5.6
+  - hhvm
 
 before_script:
   # Update composer first
@@ -25,6 +27,11 @@ after_script:
   # Run coverage checker (Coveralls coverage icon)
   # Add -v flag to enable logging
   - php vendor/bin/coveralls
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - php: hhvm
 
 notifications:
   # Whether to receive notifications from Travis
