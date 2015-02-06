@@ -31,9 +31,9 @@
 
 namespace DesignmovesUtilsTest;
 
-use DesignmovesUtils\Module;
 use DesignmovesUtils\Filter\Slug as SlugFilter;
 use DesignmovesUtils\Listener\SlugifyListener;
+use DesignmovesUtils\Module;
 use PHPUnit_Framework_TestCase;
 use Zend\Http\Request as HttpRequest;
 use Zend\Http\Response as HttpResponse;
@@ -92,7 +92,7 @@ class ModuleTest extends PHPUnit_Framework_TestCase
         $slugifyListener = new SlugifyListener(new SlugFilter);
         $serviceManager->setService('DesignmovesUtils\Listener\SlugifyListener', $slugifyListener);
 
-        $event = new MvcEvent;
+        $event       = new MvcEvent;
         $application = new Application(array(), $serviceManager);
         $event->setApplication($application);
 

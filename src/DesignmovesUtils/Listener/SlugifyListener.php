@@ -58,12 +58,11 @@ class SlugifyListener extends AbstractListenerAggregate
      */
     public function attach(EventManagerInterface $eventManager)
     {
-        $sharedEventManager = $eventManager->getSharedManager();
-
         $id       = '*';
         $event    = 'slugify';
         $callback = array($this, 'slugify');
-        $this->listeners[] = $sharedEventManager->attach($id, $event, $callback);
+
+        $this->listeners[] = $eventManager->getSharedManager()->attach($id, $event, $callback);
     }
 
     /**
