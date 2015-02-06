@@ -9,7 +9,7 @@
         "utils",
         "utitilities"
     ],
-    "homepage": "http://www.designmoves.nl/",
+    "homepage": "https://github.com/Designmoves/DesignmovesUtils",
     "license": "BSD-3-Clause",
     "require": {
         "php": ">=5.3.23",
